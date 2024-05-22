@@ -1,16 +1,19 @@
-# TicTacToe_MVC
-Tic-Tac-Toe game designed using MVC architecture 
+# TicTacToe_Java_MVC
+Tic-Tac-Toe game designed in Java using MVC architecture 
 
-Languages and Frameworks: Java, Java Swing 
+Languages and Frameworks: Java, Java Swing, MVC  
 
-A) Implementation of the game of Tic-Tac-Toe by implementing a graphical user interface using Java's Swing library.
-
-B) The TicTacToeController interface consists of two methods: **playGame** which executes a single game of TicTacToe given a TicTacToe Model. When the game is over,
-   the playGame method ends and **handleCellClick** which handles an action in a single cell of the board, such as to make a move.
+- Implementing the classic game of Tic-Tac-Toe with a graphical user interface utilizing Java's Swing library.
+  
+- The TicTacToeController interface includes two primary methods:
+      - playGame(TicTacToeModel model): Executes a single game session of Tic-Tac-Toe using the provided model. This method terminates once the game concludes.
+      - handleCellClick(int row, int col): Manages actions performed on individual cells, such as making a move on the board.
    
-C) The TicTacToeView interface consists of three methods: **addClickListener** which set's up the controller to handle click events in the view, **refresh** which refreshes the view to reflect any changes in the game state, 
-and **makeVisible** which make the view visible to start the game session.  
+- The TicTacToeView interface comprises three essential methods:
+      - addClickListener(TicTacToeController controller): Sets up the controller to handle click events within the view.
+      - refresh(): Updates the view to reflect any changes in the game's state.
+      - makeVisible(): Displays the view to initiate the game session.
 
-D) Extended JPanel and overrides paintComponent that draws the game board and game status. Status includes indicating whose turn it is, and if the game is over, who won (or if it was a tie).
+- Extends the JPanel class and overrides the paintComponent method to render the game board and display game status, including whose turn it is and the game’s outcome (win, lose, or draw).
 
-E) Extended MouseAdapter and overrides mouseClicked to capture a click on the game board and pass it to the controller.
+- Extends the MouseAdapter class and override the mouseClicked method to capture clicks on the game board, then relay this information to the controller for processing.
